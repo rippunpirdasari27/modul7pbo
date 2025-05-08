@@ -1,28 +1,21 @@
- class kendaran { //superclass
-    String merk = "Toyota";
-    kendaran(){
-        System.out.println(" Ini constructor parent");
-    }
-    void jalan() {
-        System.out.println("kendaran sedang berjalan");
-    }
-}
-
-class Mobil extends kendaran { //subclass / child class
-    Mobil() {
-        super();
-        System.out.println ("Ini constructor child");
+package soal2;
+    class Kendaraan {
+        Kendaraan() {
+            System.out.println("construktor Kendaraan dipanggil");
+        }
     }
     
-    void klakson (String merk) {
-        System.out.println("Mobil "+ super.merk +" klakson ");
+    class Mobil extends Kendaraan {
+        Mobil() {
+            super(); 
+            System.out.println("construktor Mobil dipanggil");
+        }
     }
-}
+    
+    public class Main {
+        public static void main(String[] args) {
+            Mobil mm = new Mobil();
+        }
+    }
+    
 
-public class Main{
-    public static void main(String[] args){
-        Mobil jazz = new Mobil ();
-        jazz.jalan();
-        jazz.klakson("bmw");
-    }
-}
