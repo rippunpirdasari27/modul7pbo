@@ -1,21 +1,20 @@
 package soal2;
-    class Kendaraan {
-        Kendaraan() {
-            System.out.println("construktor Kendaraan dipanggil");
-        }
-    }
-    
-    class Mobil extends Kendaraan {
-        Mobil() {
-            super(); 
-            System.out.println("construktor Mobil dipanggil");
-        }
-    }
-    
-    public class Main {
-        public static void main(String[] args) {
-            Mobil mm = new Mobil();
-        }
-    }
-    
 
+class Orang {
+    Orang() {
+        System.out.println("Orang dibuat");
+    }
+}
+
+class Dosen extends Orang {
+    Dosen() {
+        super();
+        System.out.println("Dosen dibuat");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dosen nina = new Dosen();
+    }
+}
