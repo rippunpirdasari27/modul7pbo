@@ -1,19 +1,28 @@
-class Hewan {
-    String suara = "Suara hewan";
-}
-
-class Kucing extends Hewan {
-    String suara = "Meong";
-
-    void tampilkanSuara() {
-        System.out.println("suara milik kelas Kucing: " + suara);
-        System.out.println("suara milik kelas Hewan: " + super.suara);
+ class kendaran { //superclass
+    String merk = "Toyota";
+    kendaran(){
+        System.out.println(" Ini constructor parent");
+    }
+    void jalan() {
+        System.out.println("kendaran sedang berjalan");
     }
 }
 
-public class Main {
-    public static void main(String[] args) {
-        Kucing rippun = new Kucing();
-        rippun.tampilkanSuara();
+class Mobil extends kendaran { //subclass / child class
+    Mobil() {
+        super();
+        System.out.println ("Ini constructor child");
+    }
+    
+    void klakson (String merk) {
+        System.out.println("Mobil "+ super.merk +" klakson ");
+    }
+}
+
+public class Main{
+    public static void main(String[] args){
+        Mobil jazz = new Mobil ();
+        jazz.jalan();
+        jazz.klakson("bmw");
     }
 }
