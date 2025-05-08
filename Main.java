@@ -1,21 +1,19 @@
-package soal2;
-    class Kendaraan {
-        Kendaraan() {
-            System.out.println("construktor Kendaraan dipanggil");
-        }
-    }
-    
-    class Mobil extends Kendaraan {
-        Mobil() {
-            super(); 
-            System.out.println("construktor Mobil dipanggil");
-        }
-    }
-    
-    public class Main {
-        public static void main(String[] args) {
-            Mobil mm = new Mobil();
-        }
-    }
-    
+class Hewan {
+    String suara = "Suara hewan";
+}
 
+class Kucing extends Hewan {
+    String suara = "Meong";
+
+    void tampilkanSuara() {
+        System.out.println("suara milik kelas Kucing: " + suara);
+        System.out.println("suara milik kelas Hewan: " + super.suara);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Kucing rippun = new Kucing();
+        rippun.tampilkanSuara();
+    }
+}
